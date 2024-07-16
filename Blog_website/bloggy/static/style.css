@@ -7,13 +7,38 @@ html {
   body {
     max-width: 960px;
     margin: 0 auto;
-    background: white;
+    background: #222831;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h3, h4, h5, h6 {
     font-family: serif;
-    color: #377ba8;
+    color: #EEEEEE;
+    font-size: 3.5rem;
     margin: 1rem 0;
+    padding-bottom: .5rem;
+  }
+
+  h2 {
+    font-family: serif;
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding-bottom: .5rem;
+  }
+
+  .red-post{
+    color: #000000;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 
+        1px 1px 0 #faadad, 
+        /* -1px -1px 0 #cc2f2e,  */
+        /* 1px -1px 0 #321010,  */
+        /* -1px 1px 0 #a86262, */
+        /* 0 1px 0 #f7b6b6,  */
+        0 -1px 0 #d7cece,
+        -1px 0 0 #000b24, 
+        1px 0 0 #ffffff;
   }
   
   a {
@@ -26,7 +51,7 @@ html {
   }
   
   nav {
-    background: lightgray;
+    background: rgba(0, 0, 0, 0.567);
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
@@ -59,7 +84,7 @@ html {
   }
   
   .content > header {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgb(255, 0, 0);
     display: flex;
     align-items: flex-end;
   }
@@ -92,12 +117,13 @@ html {
   }
   
   .post .about {
-    color: slategray;
+    color: rgb(169, 172, 174);
     font-style: italic;
   }
   
   .post .body {
     white-space: pre-line;
+    color: rgba(255, 255, 255, 0.71);
   }
   
   .content:last-child {
@@ -131,4 +157,16 @@ html {
   input[type=submit] {
     align-self: start;
     min-width: 10em;
+  }
+
+  .uname{
+    color: aliceblue;
+  }
+
+  .pwd{
+    color: #cae6f6;
+  }
+
+  .aliceblue{
+    color: #cae6f6;
   }
