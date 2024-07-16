@@ -86,12 +86,13 @@ def logout():
 
 
 def login_required(view):
-    @functools.wraps(view)
+    @functools.wraps(view)  # Preserve the original function's metadata
     def wrapped_view(**kwargs):
-        if g.user is None:
-            return redirect(url_for('auth.login'))
+        if g.user is None:  # Check if the user is not authenticated
+            return redirect(url_for('auth.login'))  # Redirect to the login page
 
-        return view(**kwargs)
+        return view(**kwargs)  # If the user is authenticated, proceed with the original view function
 
-    return wrapped_view
+    return wrapped_view  # Return the wrapped view function
+
         
